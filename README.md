@@ -1,24 +1,7 @@
-# README
+# THURUPPUGULAN
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple and cool way of playing your favorite card game.
 
-Things you may want to cover:
+This project/game is built to Rails 5.1.4 and Ruby 2.3.1.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The app is still in early development phase but promises to be an awesome gaming experiences soon enough for all card gamers around the world.
