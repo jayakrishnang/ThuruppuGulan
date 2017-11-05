@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="jumbotron">
+    <h1>MATCHES HOME</h1>
+    <table class="table">
+      <th>MATCH NAME</th>
+      <th>TEAMS</th>
+      <% @matches.each do |match| %>
+        <tr>
+          <td><%=match.name%></td>
+          <td><%=Team.find(match.first_team_id).name%> vs <%= Team.find(match.second_team_id).name%></td>
+          <td><%= link_to 'CONTINUE MATCH', match_path(match), class: 'btn btn-success' %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

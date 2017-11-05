@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ThuruppuGulan</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header id="slider-area">
+      <nav class="navbar navbar-expand-md fixed-top scrolling-navbar mainmenu-area">
+        <div class="container">
+          <div>
+            <ul class="navbar-nav mr-auto w-100 justify-content-end">
+              <li class="nav-item">
+                <%= link_to 'MATCHES HOME', matches_path, class: 'btn btn-primary' %>
+              </li>
+              <div class="nav navbar-nav navbar-right">
+                <% if current_player.present? %>
+                  <li><%= link_to current_player.email, edit_player_registration_path(current_player) %></li>
+                  <li>
+                  <%= link_to destroy_player_session_path, method: :delete do %>
+                    <i class="icon-off"></i>SIGN OUT
+                  <% end %>
+                </li>
+                <% else %>
+                  <li><%= link_to 'SIGN IN', new_player_session_path %></li>
+                <% end %>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %> alert-dismissable fade in">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><%= value %>
+        </div>
+      <% end %>
+    </div>
+    <%= yield %>
+  </body>
+</html>

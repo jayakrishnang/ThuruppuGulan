@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="jumbotron">
+    <h1><%= @match.name %></h1>
+    <table class="table">
+      <th>ROUND</th>
+      <th>DEALER</th>
+      <% @rounds.each_with_index do |round, index| %>
+        <tr>
+          <td><%= index + 1%></td>
+          <td><%= round.dealer.name %></td>
+          <td>
+          	<% if round.winner_id.blank? %>
+          		<%= link_to 'PLAY', round_path(round), class: 'btn btn-success' %>
+          	<% end %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

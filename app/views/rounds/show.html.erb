@@ -1,0 +1,15 @@
+<div class="container">
+
+</div>
+<div class="playingCards">
+  <ul class="table">
+    <% @cards.each do |card| %>
+      <li>
+        <a class="card rank-<%= card.value.downcase %> <%= format_suit(card) %>" href="#">
+          <span class="rank"><%= card.value %></span>
+          <span class="suit"><%= format_suit_symbol(card) %></span>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+</div>

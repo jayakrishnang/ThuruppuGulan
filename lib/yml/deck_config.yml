@@ -1,0 +1,8 @@
+suits:
+  'Dice,Hearts,Spade,Clubs'
+Game56X4:
+  'J,J,9,9,A,A,10,10'
+Game48X4:
+  'J,J,9,9,A,10,K,Q'
+Game40X4:
+  'J,J,9,A,10,K,Q,8'
